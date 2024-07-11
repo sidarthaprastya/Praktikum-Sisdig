@@ -1,0 +1,124 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Half_precision_adder_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying E:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:44:42 on Oct 20,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_substractor
+# -- Compiling architecture Structural of adder_substractor
+# End time: 19:44:43 on Oct 20,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:44:43 on Oct 20,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Half_precision_adder
+# -- Compiling architecture structural of Half_precision_adder
+# End time: 19:44:43 on Oct 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:44:43 on Oct 20,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder_nbit
+# -- Compiling architecture Structural of adder_nbit
+# End time: 19:44:43 on Oct 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:44:43 on Oct 20,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fulladder
+# -- Compiling architecture Gate_level of fulladder
+# End time: 19:44:43 on Oct 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.half_precision_adder
+# vsim work.half_precision_adder 
+# Start time: 19:44:51 on Oct 20,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.half_precision_adder(structural)
+# Loading work.adder_substractor(structural)
+# Loading work.adder_nbit(structural)
+# Loading work.fulladder(gate_level)
+add wave -position insertpoint  \
+sim:/half_precision_adder/output \
+sim:/half_precision_adder/x_input \
+sim:/half_precision_adder/y_input
+force -freeze sim:/half_precision_adder/x_input 0011000111000010 0
+force -freeze sim:/half_precision_adder/y_input 0000000000000000 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /half_precision_adder
+force -freeze sim:/half_precision_adder/y_input 1111110000000000 0
+run
+force -freeze sim:/half_precision_adder/x_input 0111110000000000 0
+run
+force -freeze sim:/half_precision_adder/x_input 0111110000000000 0
+force -freeze sim:/half_precision_adder/x_input 0100100110011001 0
+force -freeze sim:/half_precision_adder/x_input 0100100110011001 0
+force -freeze sim:/half_precision_adder/y_input 0100100110111101 0
+run
+force -freeze sim:/half_precision_adder/y_input 1100100110111101 0
+run
+# End time: 20:32:14 on Oct 20,2020, Elapsed time: 0:47:23
+# Errors: 0, Warnings: 16

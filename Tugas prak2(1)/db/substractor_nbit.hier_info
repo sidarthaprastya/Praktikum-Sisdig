@@ -1,0 +1,346 @@
+|substractor_adder
+OP => truey[0].IN0
+OP => truey[1].IN0
+OP => truey[2].IN0
+OP => truey[3].IN0
+OP => truey[4].IN0
+OP => truey[5].IN0
+OP => truey[6].IN0
+OP => truey[7].IN0
+OP => truey[8].IN0
+OP => truey[9].IN0
+OP => truey[10].IN0
+OP => truey[11].IN0
+OP => truey[12].IN0
+OP => truey[13].IN0
+OP => truey[14].IN0
+OP => truey[15].IN0
+OP => substractor_nbit:subs.bin
+x_add[0] => substractor_nbit:subs.x[0]
+x_add[1] => substractor_nbit:subs.x[1]
+x_add[2] => substractor_nbit:subs.x[2]
+x_add[3] => substractor_nbit:subs.x[3]
+x_add[4] => substractor_nbit:subs.x[4]
+x_add[5] => substractor_nbit:subs.x[5]
+x_add[6] => substractor_nbit:subs.x[6]
+x_add[7] => substractor_nbit:subs.x[7]
+x_add[8] => substractor_nbit:subs.x[8]
+x_add[9] => substractor_nbit:subs.x[9]
+x_add[10] => substractor_nbit:subs.x[10]
+x_add[11] => substractor_nbit:subs.x[11]
+x_add[12] => substractor_nbit:subs.x[12]
+x_add[13] => substractor_nbit:subs.x[13]
+x_add[14] => substractor_nbit:subs.x[14]
+x_add[15] => substractor_nbit:subs.x[15]
+y_add[0] => truey[0].IN1
+y_add[1] => truey[1].IN1
+y_add[2] => truey[2].IN1
+y_add[3] => truey[3].IN1
+y_add[4] => truey[4].IN1
+y_add[5] => truey[5].IN1
+y_add[6] => truey[6].IN1
+y_add[7] => truey[7].IN1
+y_add[8] => truey[8].IN1
+y_add[9] => truey[9].IN1
+y_add[10] => truey[10].IN1
+y_add[11] => truey[11].IN1
+y_add[12] => truey[12].IN1
+y_add[13] => truey[13].IN1
+y_add[14] => truey[14].IN1
+y_add[15] => truey[15].IN1
+result_add[0] << substractor_nbit:subs.subs[0]
+result_add[1] << substractor_nbit:subs.subs[1]
+result_add[2] << substractor_nbit:subs.subs[2]
+result_add[3] << substractor_nbit:subs.subs[3]
+result_add[4] << substractor_nbit:subs.subs[4]
+result_add[5] << substractor_nbit:subs.subs[5]
+result_add[6] << substractor_nbit:subs.subs[6]
+result_add[7] << substractor_nbit:subs.subs[7]
+result_add[8] << substractor_nbit:subs.subs[8]
+result_add[9] << substractor_nbit:subs.subs[9]
+result_add[10] << substractor_nbit:subs.subs[10]
+result_add[11] << substractor_nbit:subs.subs[11]
+result_add[12] << substractor_nbit:subs.subs[12]
+result_add[13] << substractor_nbit:subs.subs[13]
+result_add[14] << substractor_nbit:subs.subs[14]
+result_add[15] << substractor_nbit:subs.subs[15]
+bout_add << substractor_nbit:subs.bout
+
+
+|substractor_adder|substractor_nbit:subs
+bin => fullsubs:Adder_0.bin
+x[0] => fullsubs:Adder_0.x
+x[1] => fullsubs:Adders:1:Adder.x
+x[2] => fullsubs:Adders:2:Adder.x
+x[3] => fullsubs:Adders:3:Adder.x
+x[4] => fullsubs:Adders:4:Adder.x
+x[5] => fullsubs:Adders:5:Adder.x
+x[6] => fullsubs:Adders:6:Adder.x
+x[7] => fullsubs:Adders:7:Adder.x
+x[8] => fullsubs:Adders:8:Adder.x
+x[9] => fullsubs:Adders:9:Adder.x
+x[10] => fullsubs:Adders:10:Adder.x
+x[11] => fullsubs:Adders:11:Adder.x
+x[12] => fullsubs:Adders:12:Adder.x
+x[13] => fullsubs:Adders:13:Adder.x
+x[14] => fullsubs:Adders:14:Adder.x
+x[15] => fullsubs:Adders:15:Adder.x
+y[0] => fullsubs:Adder_0.y
+y[1] => fullsubs:Adders:1:Adder.y
+y[2] => fullsubs:Adders:2:Adder.y
+y[3] => fullsubs:Adders:3:Adder.y
+y[4] => fullsubs:Adders:4:Adder.y
+y[5] => fullsubs:Adders:5:Adder.y
+y[6] => fullsubs:Adders:6:Adder.y
+y[7] => fullsubs:Adders:7:Adder.y
+y[8] => fullsubs:Adders:8:Adder.y
+y[9] => fullsubs:Adders:9:Adder.y
+y[10] => fullsubs:Adders:10:Adder.y
+y[11] => fullsubs:Adders:11:Adder.y
+y[12] => fullsubs:Adders:12:Adder.y
+y[13] => fullsubs:Adders:13:Adder.y
+y[14] => fullsubs:Adders:14:Adder.y
+y[15] => fullsubs:Adders:15:Adder.y
+subs[0] <= fullsubs:Adder_0.subs
+subs[1] <= fullsubs:Adders:1:Adder.subs
+subs[2] <= fullsubs:Adders:2:Adder.subs
+subs[3] <= fullsubs:Adders:3:Adder.subs
+subs[4] <= fullsubs:Adders:4:Adder.subs
+subs[5] <= fullsubs:Adders:5:Adder.subs
+subs[6] <= fullsubs:Adders:6:Adder.subs
+subs[7] <= fullsubs:Adders:7:Adder.subs
+subs[8] <= fullsubs:Adders:8:Adder.subs
+subs[9] <= fullsubs:Adders:9:Adder.subs
+subs[10] <= fullsubs:Adders:10:Adder.subs
+subs[11] <= fullsubs:Adders:11:Adder.subs
+subs[12] <= fullsubs:Adders:12:Adder.subs
+subs[13] <= fullsubs:Adders:13:Adder.subs
+subs[14] <= fullsubs:Adders:14:Adder.subs
+subs[15] <= fullsubs:Adders:15:Adder.subs
+bout <= fullsubs:Adders:15:Adder.bout
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:Adder_0
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:1:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:2:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:3:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:4:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:5:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:6:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:7:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:8:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:9:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:10:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:11:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:12:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:13:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:14:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|substractor_adder|substractor_nbit:subs|fullsubs:\Adders:15:Adder
+x => subs.IN0
+x => bout.IN0
+x => bout.IN0
+y => subs.IN1
+y => bout.IN1
+y => bout.IN0
+bin => subs.IN1
+bin => bout.IN1
+bin => bout.IN1
+subs <= subs.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+

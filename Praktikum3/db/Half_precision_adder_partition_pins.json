@@ -1,0 +1,201 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "output[8]",
+					"strict" : false
+				},
+				{
+					"name" : "output[9]",
+					"strict" : false
+				},
+				{
+					"name" : "output[10]",
+					"strict" : false
+				},
+				{
+					"name" : "output[11]",
+					"strict" : false
+				},
+				{
+					"name" : "output[12]",
+					"strict" : false
+				},
+				{
+					"name" : "output[13]",
+					"strict" : false
+				},
+				{
+					"name" : "output[14]",
+					"strict" : false
+				},
+				{
+					"name" : "output[15]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[13]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[14]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[10]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[11]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[12]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x_input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[8]",
+					"strict" : false
+				},
+				{
+					"name" : "y_input[9]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

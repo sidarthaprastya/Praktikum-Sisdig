@@ -1,0 +1,346 @@
+|adder_substractor
+OP => truey[0].IN0
+OP => truey[1].IN0
+OP => truey[2].IN0
+OP => truey[3].IN0
+OP => truey[4].IN0
+OP => truey[5].IN0
+OP => truey[6].IN0
+OP => truey[7].IN0
+OP => truey[8].IN0
+OP => truey[9].IN0
+OP => truey[10].IN0
+OP => truey[11].IN0
+OP => truey[12].IN0
+OP => truey[13].IN0
+OP => truey[14].IN0
+OP => truey[15].IN0
+OP => adder_nbit:adder.cin
+x_sub[0] => adder_nbit:adder.x[0]
+x_sub[1] => adder_nbit:adder.x[1]
+x_sub[2] => adder_nbit:adder.x[2]
+x_sub[3] => adder_nbit:adder.x[3]
+x_sub[4] => adder_nbit:adder.x[4]
+x_sub[5] => adder_nbit:adder.x[5]
+x_sub[6] => adder_nbit:adder.x[6]
+x_sub[7] => adder_nbit:adder.x[7]
+x_sub[8] => adder_nbit:adder.x[8]
+x_sub[9] => adder_nbit:adder.x[9]
+x_sub[10] => adder_nbit:adder.x[10]
+x_sub[11] => adder_nbit:adder.x[11]
+x_sub[12] => adder_nbit:adder.x[12]
+x_sub[13] => adder_nbit:adder.x[13]
+x_sub[14] => adder_nbit:adder.x[14]
+x_sub[15] => adder_nbit:adder.x[15]
+y_sub[0] => truey[0].IN1
+y_sub[1] => truey[1].IN1
+y_sub[2] => truey[2].IN1
+y_sub[3] => truey[3].IN1
+y_sub[4] => truey[4].IN1
+y_sub[5] => truey[5].IN1
+y_sub[6] => truey[6].IN1
+y_sub[7] => truey[7].IN1
+y_sub[8] => truey[8].IN1
+y_sub[9] => truey[9].IN1
+y_sub[10] => truey[10].IN1
+y_sub[11] => truey[11].IN1
+y_sub[12] => truey[12].IN1
+y_sub[13] => truey[13].IN1
+y_sub[14] => truey[14].IN1
+y_sub[15] => truey[15].IN1
+result_sub[0] <= adder_nbit:adder.sum[0]
+result_sub[1] <= adder_nbit:adder.sum[1]
+result_sub[2] <= adder_nbit:adder.sum[2]
+result_sub[3] <= adder_nbit:adder.sum[3]
+result_sub[4] <= adder_nbit:adder.sum[4]
+result_sub[5] <= adder_nbit:adder.sum[5]
+result_sub[6] <= adder_nbit:adder.sum[6]
+result_sub[7] <= adder_nbit:adder.sum[7]
+result_sub[8] <= adder_nbit:adder.sum[8]
+result_sub[9] <= adder_nbit:adder.sum[9]
+result_sub[10] <= adder_nbit:adder.sum[10]
+result_sub[11] <= adder_nbit:adder.sum[11]
+result_sub[12] <= adder_nbit:adder.sum[12]
+result_sub[13] <= adder_nbit:adder.sum[13]
+result_sub[14] <= adder_nbit:adder.sum[14]
+result_sub[15] <= adder_nbit:adder.sum[15]
+cout_sub <= adder_nbit:adder.cout
+
+
+|adder_substractor|adder_nbit:adder
+cin => fulladder:Adder_0.cin
+x[0] => fulladder:Adder_0.x
+x[1] => fulladder:Adders:1:Adder.x
+x[2] => fulladder:Adders:2:Adder.x
+x[3] => fulladder:Adders:3:Adder.x
+x[4] => fulladder:Adders:4:Adder.x
+x[5] => fulladder:Adders:5:Adder.x
+x[6] => fulladder:Adders:6:Adder.x
+x[7] => fulladder:Adders:7:Adder.x
+x[8] => fulladder:Adders:8:Adder.x
+x[9] => fulladder:Adders:9:Adder.x
+x[10] => fulladder:Adders:10:Adder.x
+x[11] => fulladder:Adders:11:Adder.x
+x[12] => fulladder:Adders:12:Adder.x
+x[13] => fulladder:Adders:13:Adder.x
+x[14] => fulladder:Adders:14:Adder.x
+x[15] => fulladder:Adders:15:Adder.x
+y[0] => fulladder:Adder_0.y
+y[1] => fulladder:Adders:1:Adder.y
+y[2] => fulladder:Adders:2:Adder.y
+y[3] => fulladder:Adders:3:Adder.y
+y[4] => fulladder:Adders:4:Adder.y
+y[5] => fulladder:Adders:5:Adder.y
+y[6] => fulladder:Adders:6:Adder.y
+y[7] => fulladder:Adders:7:Adder.y
+y[8] => fulladder:Adders:8:Adder.y
+y[9] => fulladder:Adders:9:Adder.y
+y[10] => fulladder:Adders:10:Adder.y
+y[11] => fulladder:Adders:11:Adder.y
+y[12] => fulladder:Adders:12:Adder.y
+y[13] => fulladder:Adders:13:Adder.y
+y[14] => fulladder:Adders:14:Adder.y
+y[15] => fulladder:Adders:15:Adder.y
+sum[0] <= fulladder:Adder_0.sum
+sum[1] <= fulladder:Adders:1:Adder.sum
+sum[2] <= fulladder:Adders:2:Adder.sum
+sum[3] <= fulladder:Adders:3:Adder.sum
+sum[4] <= fulladder:Adders:4:Adder.sum
+sum[5] <= fulladder:Adders:5:Adder.sum
+sum[6] <= fulladder:Adders:6:Adder.sum
+sum[7] <= fulladder:Adders:7:Adder.sum
+sum[8] <= fulladder:Adders:8:Adder.sum
+sum[9] <= fulladder:Adders:9:Adder.sum
+sum[10] <= fulladder:Adders:10:Adder.sum
+sum[11] <= fulladder:Adders:11:Adder.sum
+sum[12] <= fulladder:Adders:12:Adder.sum
+sum[13] <= fulladder:Adders:13:Adder.sum
+sum[14] <= fulladder:Adders:14:Adder.sum
+sum[15] <= fulladder:Adders:15:Adder.sum
+cout <= fulladder:Adders:15:Adder.cout
+
+
+|adder_substractor|adder_nbit:adder|fulladder:Adder_0
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:1:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:2:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:3:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:4:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:5:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:6:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:7:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:8:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:9:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:10:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:11:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:12:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:13:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:14:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder_substractor|adder_nbit:adder|fulladder:\Adders:15:Adder
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

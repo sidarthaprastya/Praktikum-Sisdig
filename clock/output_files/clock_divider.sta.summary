@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -4.339
+TNS   : -57.156
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clockdiv|pulse'
+Slack : -1.644
+TNS   : -7.052
+
+Type  : Slow 1200mV 85C Model Setup 'satuan:countsatu|carry'
+Slack : -1.633
+TNS   : -6.459
+
+Type  : Slow 1200mV 85C Model Hold 'satuan:countsatu|carry'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clockdiv|pulse'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.743
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -41.662
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clockdiv|pulse'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'satuan:countsatu|carry'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -3.984
+TNS   : -49.836
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clockdiv|pulse'
+Slack : -1.428
+TNS   : -6.054
+
+Type  : Slow 1200mV 0C Model Setup 'satuan:countsatu|carry'
+Slack : -1.392
+TNS   : -5.441
+
+Type  : Slow 1200mV 0C Model Hold 'satuan:countsatu|carry'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clockdiv|pulse'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.689
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -41.662
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clockdiv|pulse'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'satuan:countsatu|carry'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -1.345
+TNS   : -11.250
+
+Type  : Fast 1200mV 0C Model Setup 'satuan:countsatu|carry'
+Slack : -0.126
+TNS   : -0.232
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clockdiv|pulse'
+Slack : -0.109
+TNS   : -0.216
+
+Type  : Fast 1200mV 0C Model Hold 'satuan:countsatu|carry'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clockdiv|pulse'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -30.638
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clockdiv|pulse'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'satuan:countsatu|carry'
+Slack : -1.000
+TNS   : -5.000
+
+------------------------------------------------------------

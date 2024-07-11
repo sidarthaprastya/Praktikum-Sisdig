@@ -1,0 +1,43 @@
+# Reading pref.tcl
+# do clock_divider_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Prak SisDig/clock/clock_divider.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:46:50 on Nov 29,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Prak SisDig/clock/clock_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_divider
+# -- Compiling architecture behavior of clock_divider
+# End time: 10:46:50 on Nov 29,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.clock_divider
+# vsim work.clock_divider 
+# Start time: 10:46:55 on Nov 29,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider(behavior)
+add wave -position insertpoint  \
+sim:/clock_divider/D \
+sim:/clock_divider/Clk \
+sim:/clock_divider/Q
+force -freeze sim:/clock_divider/D 0 0
+force -freeze sim:/clock_divider/Clk 1 0
+run
+run
+run
+run
+force -freeze sim:/clock_divider/Clk 0 0
+run

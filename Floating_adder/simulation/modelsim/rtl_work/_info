@@ -1,0 +1,355 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/simulation/modelsim
+Eadder11
+Z1 w1604764720
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Adder11.vhd
+Z6 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Adder11.vhd
+l0
+L5 1
+VIDSkS92KRUOdbf]@GOfZF0
+!s100 QjPFmLg=kO2W9GKcnBmAM0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1605196293
+!i10b 1
+Z9 !s108 1605196292.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Adder11.vhd|
+Z11 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Adder11.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 7 adder11 0 22 IDSkS92KRUOdbf]@GOfZF0
+!i122 0
+l20
+L19 6
+VnFK855Xj?_HA25@8Hl@j91
+!s100 A;;k:oRk0:mk4F?Jd[K8e1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecombine
+Z14 w1604764180
+R2
+R3
+R4
+!i122 1
+R0
+Z15 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Combine.vhd
+Z16 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Combine.vhd
+l0
+L5 1
+V3_ZS@B_TFi3DVh5icD55n1
+!s100 mc01?Q?ohOhCjOdLPTFk61
+R7
+31
+R8
+!i10b 1
+Z17 !s108 1605196293.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Combine.vhd|
+Z19 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Combine.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 7 combine 0 22 3_ZS@B_TFi3DVh5icD55n1
+!i122 1
+l22
+L20 12
+V6Oo1caM?_lKQ27C>m^BIB0
+!s100 <Ic^SEQIV>aZ@P<7EQHcK0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Ecomps
+Z20 w1604765014
+R2
+R3
+R4
+!i122 6
+R0
+Z21 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/CompS.vhd
+Z22 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/CompS.vhd
+l0
+L5 1
+VOIYea40OH[]=EKOC1d[c71
+!s100 <B0;7LOd_[m<=JZ@RhfR:1
+R7
+31
+Z23 !s110 1605196294
+!i10b 1
+Z24 !s108 1605196294.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/CompS.vhd|
+Z26 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/CompS.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 5 comps 0 22 OIYea40OH[]=EKOC1d[c71
+!i122 6
+l21
+L19 12
+VYYLD6a@LNdZFOa:<R4A=T3
+!s100 RF>Ld>PKMl>LU2P=7>39W3
+R7
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
+Econvb
+Z27 w1604765096
+R2
+R3
+R4
+!i122 7
+R0
+Z28 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd
+Z29 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd
+l0
+L5 1
+VZLEA7^`GDD61O;f1M^>c@0
+!s100 1Q;JB[<^2YYN[N7]GAbe]0
+R7
+31
+R23
+!i10b 1
+R24
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd|
+!s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 5 convb 0 22 ZLEA7^`GDD61O;f1M^>c@0
+!i122 7
+l19
+L17 7
+VW42>d<QEOIR]QQHh4Q5ZC2
+!s100 L9I8A6ozcJW=V4;@bmXDa3
+R7
+31
+R23
+!i10b 1
+R24
+R30
+Z31 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd|
+!i113 1
+R12
+R13
+Efpadder
+Z32 w1605104205
+R2
+R3
+R4
+!i122 2
+R0
+Z33 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/FPAdder.vhd
+Z34 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/FPAdder.vhd
+l0
+L6 1
+VD_VhSXOQm`l:k:QJ>dgPD1
+!s100 OCZzc8LnnJihIoRO[9Tmc1
+R7
+31
+R8
+!i10b 1
+R17
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/FPAdder.vhd|
+Z36 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/FPAdder.vhd|
+!i113 1
+R12
+R13
+Astructural
+R2
+R3
+R4
+DEx4 work 7 fpadder 0 22 D_VhSXOQm`l:k:QJ>dgPD1
+!i122 2
+l123
+L17 214
+VN7B;4X43jGHQbUGK1d0a40
+!s100 0GgK:i5>9Mm::3j55?[9=0
+R7
+31
+R8
+!i10b 1
+R17
+R35
+R36
+!i113 1
+R12
+R13
+Eshiftr
+Z37 w1604752484
+R2
+R3
+R4
+!i122 3
+R0
+Z38 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd
+Z39 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd
+l0
+L5 1
+V?_g`bT5U]:KWC_867U5^:0
+!s100 fS29MSVBgh5e2L_S^1IoW3
+R7
+31
+R8
+!i10b 1
+R17
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd|
+Z41 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 6 shiftr 0 22 ?_g`bT5U]:KWC_867U5^:0
+!i122 3
+l22
+L17 32
+VoE_mz5^<8cab=Z8Ne`heK0
+!s100 Y`>C;LQF?1jSVkFVd>KP]1
+R7
+31
+R8
+!i10b 1
+R17
+R40
+R41
+!i113 1
+R12
+R13
+Esubse
+Z42 w1604752992
+R2
+R3
+R4
+!i122 4
+R0
+Z43 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SubsE.vhd
+Z44 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SubsE.vhd
+l0
+L5 1
+VTK?mhJK8cThV9[@J0[Yod3
+!s100 `TnJ`>a`<l:ZOG7hlFN^l1
+R7
+31
+R8
+!i10b 1
+R17
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SubsE.vhd|
+Z46 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SubsE.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 5 subse 0 22 TK?mhJK8cThV9[@J0[Yod3
+!i122 4
+l21
+L19 13
+Vm[K[JgWK47b<5]oU6eDl93
+!s100 5kLh`VPOV<4UURJ1_UE1z0
+R7
+31
+R8
+!i10b 1
+R17
+R45
+R46
+!i113 1
+R12
+R13
+Eswapm
+Z47 w1604753012
+R2
+R3
+R4
+!i122 5
+R0
+Z48 8C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SwapM.vhd
+Z49 FC:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SwapM.vhd
+l0
+L5 1
+VnzSa5ki`SA`NQHQRNGHFc3
+!s100 5cSkIVnkJU<_ES>Rn7fSQ0
+R7
+31
+R23
+!i10b 1
+R24
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SwapM.vhd|
+Z51 !s107 C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SwapM.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 5 swapm 0 22 nzSa5ki`SA`NQHQRNGHFc3
+!i122 5
+l21
+L20 10
+V9An[MJHoNOmgR=`UMOnHm3
+!s100 <BU1WHoNG_jFUdM?aW`OY2
+R7
+31
+R23
+!i10b 1
+R24
+R50
+R51
+!i113 1
+R12
+R13

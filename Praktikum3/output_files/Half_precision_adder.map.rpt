@@ -1,0 +1,814 @@
+Analysis & Synthesis report for Half_precision_adder
+Tue Oct 20 19:19:38 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: adder_substractor:comp
+ 12. Parameter Settings for User Entity Instance: adder_substractor:comp|adder_nbit:adder
+ 13. Port Connectivity Checks: "adder_substractor:comp"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 20 19:19:38 2020       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; Half_precision_adder                        ;
+; Top-level Entity Name              ; Half_precision_adder                        ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 328                                         ;
+;     Total combinational functions  ; 328                                         ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 48                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                  ;
++------------------------------------------------------------------+----------------------+----------------------+
+; Option                                                           ; Setting              ; Default Value        ;
++------------------------------------------------------------------+----------------------+----------------------+
+; Device                                                           ; EP4CE6E22C8          ;                      ;
+; Top-level entity name                                            ; Half_precision_adder ; Half_precision_adder ;
+; Family name                                                      ; Cyclone IV E         ; Cyclone V            ;
+; Use smart compilation                                            ; Off                  ; Off                  ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                   ; On                   ;
+; Enable compact report table                                      ; Off                  ; Off                  ;
+; Restructure Multiplexers                                         ; Auto                 ; Auto                 ;
+; Create Debugging Nodes for IP Cores                              ; Off                  ; Off                  ;
+; Preserve fewer node names                                        ; On                   ; On                   ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable               ; Enable               ;
+; Verilog Version                                                  ; Verilog_2001         ; Verilog_2001         ;
+; VHDL Version                                                     ; VHDL_1993            ; VHDL_1993            ;
+; State Machine Processing                                         ; Auto                 ; Auto                 ;
+; Safe State Machine                                               ; Off                  ; Off                  ;
+; Extract Verilog State Machines                                   ; On                   ; On                   ;
+; Extract VHDL State Machines                                      ; On                   ; On                   ;
+; Ignore Verilog initial constructs                                ; Off                  ; Off                  ;
+; Iteration limit for constant Verilog loops                       ; 5000                 ; 5000                 ;
+; Iteration limit for non-constant Verilog loops                   ; 250                  ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                   ; On                   ;
+; Infer RAMs from Raw Logic                                        ; On                   ; On                   ;
+; Parallel Synthesis                                               ; On                   ; On                   ;
+; DSP Block Balancing                                              ; Auto                 ; Auto                 ;
+; NOT Gate Push-Back                                               ; On                   ; On                   ;
+; Power-Up Don't Care                                              ; On                   ; On                   ;
+; Remove Redundant Logic Cells                                     ; Off                  ; Off                  ;
+; Remove Duplicate Registers                                       ; On                   ; On                   ;
+; Ignore CARRY Buffers                                             ; Off                  ; Off                  ;
+; Ignore CASCADE Buffers                                           ; Off                  ; Off                  ;
+; Ignore GLOBAL Buffers                                            ; Off                  ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                  ; Off                  ;
+; Ignore LCELL Buffers                                             ; Off                  ; Off                  ;
+; Ignore SOFT Buffers                                              ; On                   ; On                   ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                  ; Off                  ;
+; Optimization Technique                                           ; Balanced             ; Balanced             ;
+; Carry Chain Length                                               ; 70                   ; 70                   ;
+; Auto Carry Chains                                                ; On                   ; On                   ;
+; Auto Open-Drain Pins                                             ; On                   ; On                   ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                  ; Off                  ;
+; Auto ROM Replacement                                             ; On                   ; On                   ;
+; Auto RAM Replacement                                             ; On                   ; On                   ;
+; Auto DSP Block Replacement                                       ; On                   ; On                   ;
+; Auto Shift Register Replacement                                  ; Auto                 ; Auto                 ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                 ; Auto                 ;
+; Auto Clock Enable Replacement                                    ; On                   ; On                   ;
+; Strict RAM Replacement                                           ; Off                  ; Off                  ;
+; Allow Synchronous Control Signals                                ; On                   ; On                   ;
+; Force Use of Synchronous Clear Signals                           ; Off                  ; Off                  ;
+; Auto RAM Block Balancing                                         ; On                   ; On                   ;
+; Auto RAM to Logic Cell Conversion                                ; Off                  ; Off                  ;
+; Auto Resource Sharing                                            ; Off                  ; Off                  ;
+; Allow Any RAM Size For Recognition                               ; Off                  ; Off                  ;
+; Allow Any ROM Size For Recognition                               ; Off                  ; Off                  ;
+; Allow Any Shift Register Size For Recognition                    ; Off                  ; Off                  ;
+; Use LogicLock Constraints during Resource Balancing              ; On                   ; On                   ;
+; Ignore translate_off and synthesis_off directives                ; Off                  ; Off                  ;
+; Timing-Driven Synthesis                                          ; On                   ; On                   ;
+; Report Parameter Settings                                        ; On                   ; On                   ;
+; Report Source Assignments                                        ; On                   ; On                   ;
+; Report Connectivity Checks                                       ; On                   ; On                   ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                  ; Off                  ;
+; Synchronization Register Chain Length                            ; 2                    ; 2                    ;
+; Power Optimization During Synthesis                              ; Normal compilation   ; Normal compilation   ;
+; HDL message level                                                ; Level2               ; Level2               ;
+; Suppress Register Optimization Related Messages                  ; Off                  ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                 ; 5000                 ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                 ; 5000                 ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                  ; 100                  ;
+; Clock MUX Protection                                             ; On                   ; On                   ;
+; Auto Gated Clock Conversion                                      ; Off                  ; Off                  ;
+; Block Design Naming                                              ; Auto                 ; Auto                 ;
+; SDC constraint protection                                        ; Off                  ; Off                  ;
+; Synthesis Effort                                                 ; Auto                 ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                   ; On                   ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                  ; Off                  ;
+; Analysis & Synthesis Message Level                               ; Medium               ; Medium               ;
+; Disable Register Merging Across Hierarchies                      ; Auto                 ; Auto                 ;
+; Resource Aware Inference For Block RAM                           ; On                   ; On                   ;
++------------------------------------------------------------------+----------------------+----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------+---------+
+; adder_substractor.vhd            ; yes             ; User VHDL File        ; C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd    ;         ;
+; half_precision_adder.vhd         ; yes             ; Auto-Found VHDL File  ; C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd ;         ;
+; adder_nbit.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd           ;         ;
+; fulladder.vhd                    ; yes             ; Auto-Found VHDL File  ; C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd            ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 328         ;
+;                                             ;             ;
+; Total combinational functions               ; 328         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 182         ;
+;     -- 3 input functions                    ; 115         ;
+;     -- <=2 input functions                  ; 31          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 302         ;
+;     -- arithmetic mode                      ; 26          ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 48          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; LessThan6~3 ;
+; Maximum fan-out                             ; 32          ;
+; Total fan-out                               ; 1191        ;
+; Average fan-out                             ; 2.81        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Entity Name          ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
+; |Half_precision_adder                 ; 328 (308)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 48   ; 0            ; |Half_precision_adder                                                                    ; Half_precision_adder ; work         ;
+;    |adder_substractor:comp|           ; 20 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp                                             ; adder_substractor    ; work         ;
+;       |adder_nbit:adder|              ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder                            ; adder_nbit           ; work         ;
+;          |fulladder:\adder_i:1:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:1:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:2:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:2:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:3:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:3:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:4:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:4:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:5:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:5:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:6:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:6:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:7:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:7:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:8:adder| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:8:adder ; fulladder            ; work         ;
+;          |fulladder:\adder_i:9:adder| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:\adder_i:9:adder ; fulladder            ; work         ;
+;          |fulladder:adder_0|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Half_precision_adder|adder_substractor:comp|adder_nbit:adder|fulladder:adder_0          ; fulladder            ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; MS[0]                                                ; SS                  ; yes                    ;
+; x_op[0]                                              ; norm                ; yes                    ;
+; y_op[0]                                              ; norm                ; yes                    ;
+; norm                                                 ; GND                 ; yes                    ;
+; MS[1]                                                ; SS                  ; yes                    ;
+; x_op[1]                                              ; norm                ; yes                    ;
+; operator                                             ; norm                ; yes                    ;
+; y_op[1]                                              ; norm                ; yes                    ;
+; MS[2]                                                ; SS                  ; yes                    ;
+; x_op[2]                                              ; norm                ; yes                    ;
+; y_op[2]                                              ; norm                ; yes                    ;
+; MS[3]                                                ; SS                  ; yes                    ;
+; x_op[3]                                              ; norm                ; yes                    ;
+; y_op[3]                                              ; norm                ; yes                    ;
+; MS[4]                                                ; SS                  ; yes                    ;
+; x_op[4]                                              ; norm                ; yes                    ;
+; y_op[4]                                              ; norm                ; yes                    ;
+; MS[5]                                                ; SS                  ; yes                    ;
+; x_op[5]                                              ; norm                ; yes                    ;
+; y_op[5]                                              ; norm                ; yes                    ;
+; MS[6]                                                ; SS                  ; yes                    ;
+; x_op[6]                                              ; norm                ; yes                    ;
+; y_op[6]                                              ; norm                ; yes                    ;
+; MS[7]                                                ; SS                  ; yes                    ;
+; x_op[7]                                              ; norm                ; yes                    ;
+; y_op[7]                                              ; norm                ; yes                    ;
+; MS[8]                                                ; SS                  ; yes                    ;
+; x_op[8]                                              ; norm                ; yes                    ;
+; y_op[8]                                              ; norm                ; yes                    ;
+; MS[9]                                                ; SS                  ; yes                    ;
+; x_op[9]                                              ; norm                ; yes                    ;
+; y_op[9]                                              ; norm                ; yes                    ;
+; ES[0]                                                ; SS                  ; yes                    ;
+; ES[1]                                                ; SS                  ; yes                    ;
+; ES[2]                                                ; SS                  ; yes                    ;
+; ES[3]                                                ; SS                  ; yes                    ;
+; ES[4]                                                ; SS                  ; yes                    ;
+; SS                                                   ; SS                  ; yes                    ;
+; y_man_up[0]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[0]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[1]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[1]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[2]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[2]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[3]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[3]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[4]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[4]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[5]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[5]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[6]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[6]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[7]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[7]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[8]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[8]                                          ; x_man_up[9]         ; yes                    ;
+; y_man_up[9]                                          ; x_man_up[9]         ; yes                    ;
+; x_man_up[9]                                          ; x_man_up[9]         ; yes                    ;
+; dif_exp[0]                                           ; SS                  ; yes                    ;
+; dif_exp[1]                                           ; SS                  ; yes                    ;
+; dif_exp[2]                                           ; SS                  ; yes                    ;
+; dif_exp[3]                                           ; SS                  ; yes                    ;
+; dif_exp[4]                                           ; SS                  ; yes                    ;
+; dif_exp[5]                                           ; SS                  ; yes                    ;
+; dif_exp[6]                                           ; SS                  ; yes                    ;
+; dif_exp[7]                                           ; SS                  ; yes                    ;
+; dif_exp[8]                                           ; SS                  ; yes                    ;
+; dif_exp[9]                                           ; SS                  ; yes                    ;
+; dif_exp[10]                                          ; SS                  ; yes                    ;
+; dif_exp[11]                                          ; SS                  ; yes                    ;
+; dif_exp[12]                                          ; SS                  ; yes                    ;
+; dif_exp[13]                                          ; SS                  ; yes                    ;
+; dif_exp[14]                                          ; SS                  ; yes                    ;
+; dif_exp[15]                                          ; SS                  ; yes                    ;
+; dif_exp[16]                                          ; SS                  ; yes                    ;
+; dif_exp[17]                                          ; SS                  ; yes                    ;
+; dif_exp[18]                                          ; SS                  ; yes                    ;
+; dif_exp[19]                                          ; SS                  ; yes                    ;
+; dif_exp[20]                                          ; SS                  ; yes                    ;
+; dif_exp[21]                                          ; SS                  ; yes                    ;
+; dif_exp[22]                                          ; SS                  ; yes                    ;
+; dif_exp[23]                                          ; SS                  ; yes                    ;
+; dif_exp[24]                                          ; SS                  ; yes                    ;
+; dif_exp[25]                                          ; SS                  ; yes                    ;
+; dif_exp[26]                                          ; SS                  ; yes                    ;
+; dif_exp[27]                                          ; SS                  ; yes                    ;
+; dif_exp[28]                                          ; SS                  ; yes                    ;
+; dif_exp[29]                                          ; SS                  ; yes                    ;
+; dif_exp[30]                                          ; SS                  ; yes                    ;
+; dif_exp[31]                                          ; SS                  ; yes                    ;
+; num_x_exp[0]                                         ; process_0           ; yes                    ;
+; num_y_exp[0]                                         ; process_0           ; yes                    ;
+; num_x_exp[1]                                         ; process_0           ; yes                    ;
+; num_y_exp[1]                                         ; process_0           ; yes                    ;
+; num_x_exp[2]                                         ; process_0           ; yes                    ;
+; num_y_exp[2]                                         ; process_0           ; yes                    ;
+; num_x_exp[3]                                         ; process_0           ; yes                    ;
+; num_y_exp[3]                                         ; process_0           ; yes                    ;
+; num_x_exp[4]                                         ; process_0           ; yes                    ;
+; num_y_exp[4]                                         ; process_0           ; yes                    ;
+; Number of user-specified and inferred latches = 100  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Half_precision_adder|ES[0]    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Half_precision_adder|out_y[1] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Half_precision_adder|out_x[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_substractor:comp ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 10    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_substractor:comp|adder_nbit:adder ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; n              ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_substractor:comp"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cout_sub ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 48                          ;
+; cycloneiii_lcell_comb ; 328                         ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 10                          ;
+;     normal            ; 302                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 105                         ;
+;         4 data inputs ; 182                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 5.96                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 20 19:19:03 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Half_precision_adder -c Half_precision_adder
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (12019): Can't analyze file -- file grouping.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file adder_substractor.vhd
+    Info (12022): Found design unit 1: adder_substractor-Structural File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd Line: 16
+    Info (12023): Found entity 1: adder_substractor File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd Line: 5
+Warning (12125): Using design file half_precision_adder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Half_precision_adder-structural File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 19
+    Info (12023): Found entity 1: Half_precision_adder File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 10
+Info (12127): Elaborating entity "Half_precision_adder" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at half_precision_adder.vhd(54): object "cout" assigned a value but never read File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(87): signal "y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(93): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(101): signal "y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(107): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(115): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(138): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(139): signal "y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 139
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(143): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(143): signal "y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 143
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(144): signal "num_x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(144): signal "num_y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(160): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(160): signal "y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(161): signal "num_y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(161): signal "num_x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(176): signal "x_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(176): signal "y_exp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 176
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "SS", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "ES", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "MS", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "norm", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "num_x_exp", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "num_y_exp", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "dif_exp", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "x_man_up", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(82): inferring latch(es) for signal or variable "y_man_up", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(194): signal "y_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(195): signal "x_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 195
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(198): signal "x_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 198
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(199): signal "y_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 199
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(205): signal "x_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 205
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(206): signal "y_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 206
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(209): signal "x_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 209
+Warning (10492): VHDL Process Statement warning at half_precision_adder.vhd(210): signal "y_man_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 210
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(189): inferring latch(es) for signal or variable "operator", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(189): inferring latch(es) for signal or variable "x_op", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Warning (10631): VHDL Process Statement warning at half_precision_adder.vhd(189): inferring latch(es) for signal or variable "y_op", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[0]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[1]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[2]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[3]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[4]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[5]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[6]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[7]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[8]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_op[9]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[0]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[1]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[2]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[3]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[4]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[5]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[6]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[7]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[8]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "x_op[9]" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "operator" at half_precision_adder.vhd(189) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 189
+Info (10041): Inferred latch for "y_man_up[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[5]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[6]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[7]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[8]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "y_man_up[9]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[5]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[6]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[7]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[8]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "x_man_up[9]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[5]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[6]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[7]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[8]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[9]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[10]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[11]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[12]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[13]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[14]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[15]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[16]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[17]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[18]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[19]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[20]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[21]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[22]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[23]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[24]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[25]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[26]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[27]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[28]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[29]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[30]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "dif_exp[31]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[5]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[6]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[7]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[8]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[9]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[10]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[11]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[12]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[13]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[14]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[15]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[16]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[17]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[18]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[19]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[20]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[21]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[22]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[23]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[24]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[25]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[26]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[27]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[28]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[29]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[30]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_y_exp[31]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[5]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[6]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[7]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[8]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[9]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[10]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[11]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[12]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[13]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[14]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[15]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[16]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[17]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[18]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[19]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[20]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[21]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[22]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[23]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[24]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[25]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[26]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[27]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[28]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[29]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[30]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "num_x_exp[31]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "norm" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[5]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[6]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[7]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[8]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "MS[9]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "ES[0]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "ES[1]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "ES[2]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "ES[3]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "ES[4]" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (10041): Inferred latch for "SS" at half_precision_adder.vhd(82) File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Info (12128): Elaborating entity "adder_substractor" for hierarchy "adder_substractor:comp" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 217
+Warning (12125): Using design file adder_nbit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: adder_nbit-Structural File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd Line: 15
+    Info (12023): Found entity 1: adder_nbit File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd Line: 4
+Info (12128): Elaborating entity "adder_nbit" for hierarchy "adder_substractor:comp|adder_nbit:adder" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd Line: 36
+Warning (12125): Using design file fulladder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: fulladder-Gate_level File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd Line: 13
+    Info (12023): Found entity 1: fulladder File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd Line: 4
+Info (12128): Elaborating entity "fulladder" for hierarchy "adder_substractor:comp|adder_nbit:adder|fulladder:adder_0" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd Line: 28
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "dif_exp[8]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[9]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[10]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[11]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[12]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[13]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[14]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[15]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[16]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[17]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[18]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[19]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[20]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[21]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[22]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[23]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[24]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[25]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[26]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[27]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[28]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[29]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[30]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Info (13026): Duplicate LATCH primitive "dif_exp[31]" merged with LATCH primitive "dif_exp[7]" File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+Warning (13012): Latch MS[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[0] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[1] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[2] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[3] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[4] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[5] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[5] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[6] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[6] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[7] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[7] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[8] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[8] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch MS[9] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[9] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch ES[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch ES[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[11] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch ES[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[12] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch ES[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[13] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch ES[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch SS has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[15] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[0] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[0] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[1] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[1] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[2] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[2] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[3] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[3] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[4] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[4] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[5] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[5] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[5] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[5] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[6] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[6] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[6] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[6] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[7] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[7] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[7] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[7] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[8] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[8] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[8] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[8] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch y_man_up[9] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[9] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch x_man_up[9] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[9] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[5] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[6] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch dif_exp[7] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch num_x_exp[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch num_y_exp[0] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[10] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch num_x_exp[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[11] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch num_y_exp[1] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[11] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch num_x_exp[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[12] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch num_y_exp[2] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[12] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch num_x_exp[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[13] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch num_y_exp[3] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[13] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Warning (13012): Latch num_x_exp[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 12
+Warning (13012): Latch num_y_exp[4] has unsafe behavior File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_input[14] File: C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd Line: 13
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 376 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 328 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 166 warnings
+    Info: Peak virtual memory: 658 megabytes
+    Info: Processing ended: Tue Oct 20 19:19:38 2020
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:58
+
+

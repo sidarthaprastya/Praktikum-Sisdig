@@ -1,0 +1,82 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity segment_on is
+port(
+	clk1khz	: in std_logic;
+	digit1	: in integer range 0 to 9;
+	digit2	: in integer range 0 to 9;
+	
+	a1,b1,c1,d1,e1,f1,g1	: out std_logic;
+	a2,b2,c2,d2,e2,f2,g2	: out std_logic
+);
+end segment_on;
+
+architecture RTL of segment_on is
+
+signal switch	: std_logic := '0';
+
+variable BCD1, BCD2	: std_logic_vector (0 to 6);
+begin
+	process(digit1, digit2)
+	begin
+	case (digit1) is
+		when 0 => BCD1 := "0000001";
+		when 1 => BCD1 := "1001111";
+		when 2 => BCD1 := "0010010";
+		when 3 => BCD1 := "0000110";
+		when 4 => BCD1 := "1001100";
+		when 5 => BCD1 := "0100100";
+		when 6 => BCD1 := "0100000";
+		when 7 => BCD1 := "0001111";
+		when 8 => BCD1 := "0000000";
+		when 9 => BCD1 := "0000100";
+		when others => BCD1 := "1111111";
+	end case;
+	
+	case (digit2) is
+		when 0 => BCD2 := "0000001";
+		when 1 => BCD2 := "1001111";
+		when 2 => BCD2 := "0010010";
+		when 3 => BCD2 := "0000110";
+		when 4 => BCD2 := "1001100";
+		when 5 => BCD2 := "0100100";
+		when 6 => BCD2 := "0100000";
+		when 7 => BCD2 := "0001111";
+		when 8 => BCD2 := "0000000";
+		when 9 => BCD2 := "0000100";
+		when others => BCD2 := "1111111";
+	end case;
+	end process;
+	
+	process (clk1khz)
+	begin
+	if clk1khz ='1' and clk1khz'event then
+		if switch ='0' then
+			BCD2 := "1111111";
+			switch <= not switch;
+		else
+			BCD1 := "1111111";
+			switch <= not switch;
+		end if;
+	end if;
+	
+	a1 <= BCD1(0);
+	b1 <= BCD1(1);
+	c1 <= BCD1(2);
+	d1 <= BCD1(3);
+	e1 <= BCD1(4);
+	f1 <= BCD1(5);
+	g1 <= BCD1(6);
+	
+	a2 <= BCD2(0);
+	b2 <= BCD2(1);
+	c2 <= BCD2(2);
+	d2 <= BCD2(3);
+	e2 <= BCD2(4);
+	f2 <= BCD2(5);
+	g2 <= BCD2(6);
+	
+	end process;
+
+end architecture 

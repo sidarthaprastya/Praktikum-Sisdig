@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'x_input[0]'
+Slack : -6.993
+TNS   : -220.232
+
+Type  : Slow 1200mV 85C Model Setup 'norm'
+Slack : -5.672
+TNS   : -109.895
+
+Type  : Slow 1200mV 85C Model Hold 'x_input[0]'
+Slack : -0.442
+TNS   : -0.848
+
+Type  : Slow 1200mV 85C Model Hold 'norm'
+Slack : 4.670
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'x_input[0]'
+Slack : -4.885
+TNS   : -63.491
+
+Type  : Slow 1200mV 85C Model Removal 'x_input[0]'
+Slack : 1.714
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'x_input[0]'
+Slack : -3.000
+TNS   : -57.921
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'norm'
+Slack : 0.476
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'x_input[0]'
+Slack : -6.563
+TNS   : -207.617
+
+Type  : Slow 1200mV 0C Model Setup 'norm'
+Slack : -5.138
+TNS   : -99.041
+
+Type  : Slow 1200mV 0C Model Hold 'x_input[0]'
+Slack : -0.412
+TNS   : -0.755
+
+Type  : Slow 1200mV 0C Model Hold 'norm'
+Slack : 4.245
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'x_input[0]'
+Slack : -4.982
+TNS   : -64.925
+
+Type  : Slow 1200mV 0C Model Removal 'x_input[0]'
+Slack : 1.511
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'x_input[0]'
+Slack : -3.000
+TNS   : -50.789
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'norm'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'x_input[0]'
+Slack : -2.526
+TNS   : -80.944
+
+Type  : Fast 1200mV 0C Model Setup 'norm'
+Slack : -2.379
+TNS   : -46.015
+
+Type  : Fast 1200mV 0C Model Hold 'x_input[0]'
+Slack : -0.431
+TNS   : -0.662
+
+Type  : Fast 1200mV 0C Model Hold 'norm'
+Slack : 2.449
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'x_input[0]'
+Slack : -2.539
+TNS   : -34.277
+
+Type  : Fast 1200mV 0C Model Removal 'x_input[0]'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'x_input[0]'
+Slack : -3.000
+TNS   : -16.732
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'norm'
+Slack : 0.435
+TNS   : 0.000
+
+------------------------------------------------------------

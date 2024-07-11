@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity grouping is
+	port (
+		x_input: in std_logic_vector(15 downto 0);
+		y_input: in std_logic_vector(15 downto 0);
+		x_mantissa: out std_logic_vector(9 downto 0);
+		y_mantissa: out std_logic_vector(9 downto 0);
+		x_exp	: out std_logic_vector(4 downto 0);
+		y_exp	: out std_logic_vector(4 downto 0);
+		x_sign	: out std_logic;
+		y_sign	: out std_logic
+		);
+end entity;
+
+architecture structural is
+	begin
+		x_sign <= x_input(0);
+		y_sign <= y_input(0);
+		
+		split_i_exp : for i in 1 to 5 generate
+			x_exp(i-1) <= x_input(i);
+			y-exp(i-1) <= y_input(i);
+		
+		end generate;
+		
+		split_i_man : for i in 6 to 15 generate
+			x_mantissa(i-6) <= x_input(i);
+			y_mantissa(i-6) <= y_input(i);
+			
+		end generate;
+		
+	end architecture structural;

@@ -1,0 +1,179 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/simulation/modelsim
+Eadder_nbit
+Z1 w1603120394
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd
+Z5 FC:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd
+l0
+L4 1
+VWoNEWdRX1^9dZAk>i<[]j1
+!s100 3RbLInJ@JYcCRF58B^Elj2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1603197883
+!i10b 1
+Z8 !s108 1603197883.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd|
+Z10 !s107 C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_nbit.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+DEx4 work 10 adder_nbit 0 22 WoNEWdRX1^9dZAk>i<[]j1
+!i122 2
+l27
+L15 36
+V@`PSINUBUQILDOTgg?5Gh1
+!s100 ;4?KC8IHRO=^Z:MaEX>d>1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eadder_substractor
+Z13 w1603117994
+R2
+R3
+!i122 0
+R0
+Z14 8C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd
+Z15 FC:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd
+l0
+L5 1
+VaBK6aDZ3AKWH`nML]LIlC2
+!s100 RDhZ4G1fUa9?j][RW7jK43
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1603197882.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd|
+Z18 !s107 C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/adder_substractor.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 17 adder_substractor 0 22 aBK6aDZ3AKWH`nML]LIlC2
+!i122 0
+l30
+L16 24
+VA?DJ]n=Y=IABI5Yg[elSK1
+!s100 i?@beHTa20N1TJ2TGacSg3
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Efulladder
+Z19 w1603008582
+R2
+R3
+!i122 3
+R0
+Z20 8C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd
+Z21 FC:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd
+l0
+L4 1
+VNYRJOLfM[BRR6KO<=60eO3
+!s100 m[e<4_RWlmaV`:zgXLd<82
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd|
+!s107 C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd|
+!i113 1
+R11
+R12
+Agate_level
+R2
+R3
+DEx4 work 9 fulladder 0 22 NYRJOLfM[BRR6KO<=60eO3
+!i122 3
+l14
+L13 5
+V>9@1M]QM77YIC[F2m7]F11
+!s100 OhIHZ_<:7z2OioHY59n?P3
+R6
+31
+R7
+!i10b 1
+R8
+R22
+Z23 !s107 C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/fulladder.vhd|
+!i113 1
+R11
+R12
+Ehalf_precision_adder
+Z24 w1603172773
+Z25 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z26 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 1
+R0
+Z27 8C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd
+Z28 FC:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd
+l0
+L10 1
+V971DgoC1aU@EoTc5D>Jc=3
+!s100 =]:6PIAAzfHZJE>X68[JV0
+R6
+31
+R7
+!i10b 1
+R8
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd|
+Z30 !s107 C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum3/half_precision_adder.vhd|
+!i113 1
+R11
+R12
+Astructural
+R25
+R26
+R2
+R3
+DEx4 work 20 half_precision_adder 0 22 971DgoC1aU@EoTc5D>Jc=3
+!i122 1
+l58
+L19 210
+V5FSEmT1e^_mUj@O=UdTZ@0
+!s100 >]_2lgPaj69FzMCd7o_[G2
+R6
+31
+R7
+!i10b 1
+R8
+R29
+R30
+!i113 1
+R11
+R12

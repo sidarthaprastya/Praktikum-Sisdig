@@ -1,0 +1,43 @@
+# Reading pref.tcl
+# do counter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum5/counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:40:05 on Nov 29,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Prak SisDig/Praktikum5/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 00:40:05 on Nov 29,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.counter
+# vsim work.counter 
+# Start time: 00:40:15 on Nov 29,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.counter(behav)
+add wave -position insertpoint  \
+sim:/counter/clk \
+sim:/counter/up_down \
+sim:/counter/count
+force -freeze sim:/counter/clk 1 0
+force -freeze sim:/counter/up_down 1 0
+run
+run
+run
+run
+# End time: 01:12:09 on Nov 29,2020, Elapsed time: 0:31:54
+# Errors: 0, Warnings: 0

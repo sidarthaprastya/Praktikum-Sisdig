@@ -1,0 +1,44 @@
+|Praktikum1
+X[0] => A.IN0
+X[0] => B.IN0
+X[0] => C.IN0
+X[0] => D.IN0
+X[0] => B.IN0
+X[0] => A.IN0
+X[0] => D.IN0
+X[0] => E.IN1
+X[0] => F.IN0
+X[0] => G.IN0
+X[1] => A.IN0
+X[1] => B.IN1
+X[1] => D.IN1
+X[1] => D.IN0
+X[1] => E.IN0
+X[1] => B.IN1
+X[1] => C.IN1
+X[1] => D.IN1
+X[1] => F.IN0
+X[1] => G.IN1
+X[2] => A.IN1
+X[2] => C.IN1
+X[2] => D.IN1
+X[2] => F.IN1
+X[2] => F.IN1
+X[2] => G.IN1
+X[2] => B.IN1
+X[2] => A.IN1
+X[2] => D.IN1
+X[2] => E.IN1
+X[2] => G.IN1
+X[3] => A.IN1
+X[3] => D.IN1
+X[3] => F.IN1
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+A <= A.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+E <= E.DB_MAX_OUTPUT_PORT_TYPE
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+

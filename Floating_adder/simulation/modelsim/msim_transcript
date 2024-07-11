@@ -1,0 +1,171 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do floating_adder_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Adder11.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:32 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Adder11.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Adder11
+# -- Compiling architecture RTL of Adder11
+# End time: 22:51:33 on Nov 12,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Combine.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:33 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/Combine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Combine
+# -- Compiling architecture RTL of Combine
+# End time: 22:51:33 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/FPAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:33 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/FPAdder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FPadder
+# -- Compiling architecture structural of FPadder
+# End time: 22:51:33 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:33 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ShiftR
+# -- Compiling architecture RTL of ShiftR
+# ** Warning: C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ShiftR.vhd(44): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 10 is not equal to right length 9).
+# End time: 22:51:33 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SubsE.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:33 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SubsE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SubsE
+# -- Compiling architecture RTL of SubsE
+# End time: 22:51:34 on Nov 12,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SwapM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:34 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/SwapM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SwapM
+# -- Compiling architecture RTL of SwapM
+# End time: 22:51:34 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/CompS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:34 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/CompS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CompS
+# -- Compiling architecture RTL of CompS
+# End time: 22:51:34 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:51:34 on Nov 12,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/Kuliah Online/Kuliah Online/Prak SisDig/Floating_adder/ConvB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ConvB
+# -- Compiling architecture RTL of ConvB
+# End time: 22:51:34 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.fpadder
+# vsim work.fpadder 
+# Start time: 22:51:43 on Nov 12,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpadder(structural)
+# Loading work.convb(rtl)
+# Loading work.comps(rtl)
+# Loading work.swapm(rtl)
+# Loading work.subse(rtl)
+# Loading work.shiftr(rtl)
+# Loading work.adder11(rtl)
+# Loading work.combine(rtl)
+add wave -position insertpoint  \
+sim:/fpadder/a \
+sim:/fpadder/b \
+sim:/fpadder/op \
+sim:/fpadder/result
+force -freeze sim:/fpadder/a 1011111010101010 0
+force -freeze sim:/fpadder/b 1011111010101010 0
+force -freeze sim:/fpadder/op 0 0
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/fpadder/b 1011111010101010 0
+force -freeze sim:/fpadder/a 0111011010111010 0
+force -freeze sim:/fpadder/op 0 0
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/fpadder/a 1011111010101111 0
+force -freeze sim:/fpadder/b 0101111010100111 0
+force -freeze sim:/fpadder/op 0 0
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/fpadder/a 1011111010101111 0
+force -freeze sim:/fpadder/b 0011111010100011 0
+force -freeze sim:/fpadder/op 0 0
+run
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fpadder
+# End time: 23:10:25 on Nov 12,2020, Elapsed time: 0:18:42
+# Errors: 0, Warnings: 2

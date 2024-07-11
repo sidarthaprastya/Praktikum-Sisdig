@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity counter is
+	port (
+		clk : in std_logic;
+		up_down : in std_logic;
+		count : out integer range 0 to 127
+	);
+	end counter;
+
+architecture behav of counter is
+begin
+	process (clk)
+	variable cnt: integer range 0 to 127;
+	constant modulus : integer := 99;
+	begin
+		if (clk'event and clk = '1') then
+			if up_down = '1' then
+				if cnt = modulus then
+					cnt := 0;
+
+				else
+					cnt := cnt + 1;
+					
+				end if;
+
+			else
+				if cnt = '0' then
+					cnt := modulus;
+
+				else
+					cnt:= cnt - 1;
+
+				end if;
+
+			end if;
+
+		end if;
+
+		count<= cnt;
+
+	end process;
+
+end behav;
